@@ -50,11 +50,13 @@
     </style>
 </head>
 <body>
-<form method=get>
-    <input type=checkbox OnChange='this.form.submit()' name='sorting' value='true' <spring:message text="${sorting}"/>/>
-</form>
 
 <h1>Список деталей</h1>
+
+<form method=get>
+    <input type=checkbox OnChange='this.form.submit()' name='sorting' value='true' <spring:message text="${sorting}"/>/>
+    <spring:message text="Сортировать по необходимости для сборки"/>
+</form>
 
 <c:if test="${!empty parts}">
     <table class="tg">
